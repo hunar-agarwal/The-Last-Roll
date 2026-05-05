@@ -3,7 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
   </head>
   <body>
     <a-scene mindar-image="imageTargetSrc: targets.mind; maxTrack: 2;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
@@ -15,7 +14,7 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model id="camera" rotation="-30 0 0" position="0 0 0.1" scale="2 2 2" src="#camera"></a-gltf-model>
+        <a-gltf-model id="camera" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear;" rotation="-30 0 0" position="0 0 0.1" scale="2 2 2" src="#camera"></a-gltf-model>
       </a-entity>
 
     </a-scene>
